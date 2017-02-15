@@ -89,6 +89,7 @@
 		D4F0302C1D46E3BF00E936DD /* StreetTreesFoundationKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D45F07C81D02614A0025F8F0 /* StreetTreesFoundationKit.framework */; };
 		D4F0302D1D46E43F00E936DD /* StreetTreesPersistentKit.h in Headers */ = {isa = PBXBuildFile; fileRef = D45F07A01D0260CA0025F8F0 /* StreetTreesPersistentKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D4F0302E1D46E44C00E936DD /* StreetTreesFoundationKit.h in Headers */ = {isa = PBXBuildFile; fileRef = D45F07CA1D02614A0025F8F0 /* StreetTreesFoundationKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D7A208A51E53F7030005DDBF /* Alamofire.framework in Resources */ = {isa = PBXBuildFile; fileRef = D7A208A21E53F63F0005DDBF /* Alamofire.framework */; };
 		E6DCA1C698E3D7CCF1C0FB8D /* Pods_StreetTreesTransportKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FF19B3753F5DFC594325A6D /* Pods_StreetTreesTransportKit.framework */; };
 		EB303E771DC92BE500A86D0F /* OrderForm.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB303E761DC92BE500A86D0F /* OrderForm.storyboard */; };
 		EB615CC91DB58A90004F6547 /* STConfirmationPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB615CC81DB58A90004F6547 /* STConfirmationPageViewController.swift */; };
@@ -290,6 +291,7 @@
 		D4EE1FDA1D2B3EDC007E6C01 /* STPKUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STPKUser.swift; sourceTree = "<group>"; };
 		D4EE1FDF1D2BF79A007E6C01 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		D4EE1FE11D2BF7FE007E6C01 /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		D7A208A21E53F63F0005DDBF /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "../../../../Library/Developer/Xcode/DerivedData/Street_Trees-bdnmnxdenbohobewardlgwkxszpg/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework"; sourceTree = "<group>"; };
 		EB303E761DC92BE500A86D0F /* OrderForm.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = OrderForm.storyboard; sourceTree = "<group>"; };
 		EB615CC81DB58A90004F6547 /* STConfirmationPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STConfirmationPageViewController.swift; sourceTree = "<group>"; };
 		EEC9D16C6101E934CDFBAD25 /* Pods_Street_TreesTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Street_TreesTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -505,6 +507,7 @@
 		D45F07751D0260100025F8F0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D7A208A21E53F63F0005DDBF /* Alamofire.framework */,
 				D4B5436D1D0339C50000CBFF /* Alamofire.framework */,
 				D4B543631D0326690000CBFF /* BNRCoreDataStack.framework */,
 				D4B543641D0326690000CBFF /* CoreData.framework */,
@@ -716,6 +719,7 @@
 				D45F075E1D0258320025F8F0 /* Frameworks */,
 				D45F075F1D0258320025F8F0 /* Resources */,
 				564799D0B24D9CE09E30865E /* [CP] Copy Pods Resources */,
+				9D363EE492B0A6481CA6C7CC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -854,6 +858,7 @@
 				TargetAttributes = {
 					D45F073E1D0258320025F8F0 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = 5L78R6E9LV;
 					};
 					D45F07551D0258320025F8F0 = {
 						CreatedOnToolsVersion = 7.3;
@@ -953,6 +958,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7A208A51E53F7030005DDBF /* Alamofire.framework in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1000,7 +1006,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		24FD54A59F3F7A8C1F829961 /* [CP] Check Pods Manifest.lock */ = {
@@ -1015,7 +1021,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		499F74B501CF28BA2E2068AF /* [CP] Copy Pods Resources */ = {
@@ -1075,7 +1081,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		64BFB629321C6C11D351D4C7 /* [CP] Copy Pods Resources */ = {
@@ -1105,7 +1111,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		7EFFE6EF5CDAEB35AF366C26 /* [CP] Embed Pods Frameworks */ = {
@@ -1138,6 +1144,21 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-StreetTreesTransportKit/Pods-StreetTreesTransportKit-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		9D363EE492B0A6481CA6C7CC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Street TreesUITests/Pods-Street TreesUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		A8DA85A66E7D2CAB2F5CD33A /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1165,7 +1186,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1463,7 +1484,7 @@
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = "Street Trees/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.CodeForOrlando.Street-Trees";
+				PRODUCT_BUNDLE_IDENTIFIER = com.codefororlando.streettrees;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -1479,7 +1500,7 @@
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = "Street Trees/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.CodeForOrlando.Street-Trees";
+				PRODUCT_BUNDLE_IDENTIFIER = com.codefororlando.streettrees;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};

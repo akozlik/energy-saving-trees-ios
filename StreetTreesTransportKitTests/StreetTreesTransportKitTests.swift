@@ -26,7 +26,7 @@
 //
 
 import XCTest
-import Alamofire
+
 @testable import StreetTreesTransportKit
 
 class StreetTreesTransportKitTests: XCTestCase {
@@ -51,6 +51,21 @@ class StreetTreesTransportKitTests: XCTestCase {
         self.measureBlock {
             // Put the code you want to measure the time of here.
         }
+    }
+    
+    func testLocalizedAddress() {
+        let address = STTKStreetAddress(streetAddress: "123 Smith Street", secondaryAddress: "", city: "Orlando", state: "Florida", zipCode: 32801, country: "USA")
+        
+        let localizedAddress = address.localizedAddress()
+        
+        XCTAssertEqual(localizedAddress, "123 Smith Street\nOrlando, Florida\nUSA 32801")
+    }
+    
+    func testFlatAddress() {
+        let address = STTKStreetAddress(streetAddress: "123 Smith Street", secondaryAddress: "", city: "Orlando", state: "Florida", zipCode: 32801, country: "USA")
+        let flatAddress = address.flatAddress()
+        
+        XCTAssertEqual(flatAddress, "123 Smith Street, Orlando, Florida, USA 32801")
     }
     
 }

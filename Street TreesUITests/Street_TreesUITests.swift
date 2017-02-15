@@ -48,6 +48,25 @@ class Street_TreesUITests: XCTestCase {
     }
     
     func testExample() {
+        
+        let app = XCUIApplication()
+        app.navigationBars["Street Trees"].buttons["Add"].tap()
+        
+        let nextButton = app.navigationBars["Choose Your Tree"].buttons["Next"]
+        nextButton.tap()
+        
+        let selectATreeAlert = app.alerts["Select a Tree"]
+        selectATreeAlert.staticTexts["Please select a tree before progressing to the next step."].tap()
+        
+        let okButton = selectATreeAlert.collectionViews.buttons["OK"]
+        okButton.tap()
+        nextButton.tap()
+        okButton.tap()
+        app.collectionViews.staticTexts["Crape Myrtle"].tap()
+        nextButton.tap()
+        app.navigationBars["Tree Delivery Address"].buttons["Next"].tap()
+        app.alerts["Missing Street Address"].collectionViews.buttons["OK"].tap()
+        
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
