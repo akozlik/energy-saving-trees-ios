@@ -48,17 +48,20 @@ class Street_TreesUITests: XCTestCase {
         super.tearDown()
     }
     
-    func testSnapshot() {
+    func testSetupSnapshot() {
+
+        let app = XCUIApplication()
+        
+        addUIInterruptionMonitorWithDescription("Location Dialog") { (alert) -> Bool in
+            alert.buttons["Allow"].tap()
+            return true
+        }
         
         snapshot("01")
-        let app = XCUIApplication()
+        
         app.navigationBars["Street Trees"].buttons["Add"].tap()
         
-        let element = app.childrenMatchingType(.Window).elementBoundByIndex(0).childrenMatchingType(.Other).element.childrenMatchingType(.Other).element
-        element.tap()
-        element.tap()
-        app.navigationBars["Choose Your Tree"].buttons["Next"].tap()
         snapshot("02")
-        
+                
     }
 }
