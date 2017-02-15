@@ -90,6 +90,7 @@
 		D4F0302D1D46E43F00E936DD /* StreetTreesPersistentKit.h in Headers */ = {isa = PBXBuildFile; fileRef = D45F07A01D0260CA0025F8F0 /* StreetTreesPersistentKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D4F0302E1D46E44C00E936DD /* StreetTreesFoundationKit.h in Headers */ = {isa = PBXBuildFile; fileRef = D45F07CA1D02614A0025F8F0 /* StreetTreesFoundationKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D7A208A51E53F7030005DDBF /* Alamofire.framework in Resources */ = {isa = PBXBuildFile; fileRef = D7A208A21E53F63F0005DDBF /* Alamofire.framework */; };
+		D7A208A71E5410280005DDBF /* SnapshotHelper2-3.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A208A61E5410280005DDBF /* SnapshotHelper2-3.swift */; };
 		E6DCA1C698E3D7CCF1C0FB8D /* Pods_StreetTreesTransportKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FF19B3753F5DFC594325A6D /* Pods_StreetTreesTransportKit.framework */; };
 		EB303E771DC92BE500A86D0F /* OrderForm.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB303E761DC92BE500A86D0F /* OrderForm.storyboard */; };
 		EB615CC91DB58A90004F6547 /* STConfirmationPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB615CC81DB58A90004F6547 /* STConfirmationPageViewController.swift */; };
@@ -292,6 +293,7 @@
 		D4EE1FDF1D2BF79A007E6C01 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		D4EE1FE11D2BF7FE007E6C01 /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		D7A208A21E53F63F0005DDBF /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "../../../../Library/Developer/Xcode/DerivedData/Street_Trees-bdnmnxdenbohobewardlgwkxszpg/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework"; sourceTree = "<group>"; };
+		D7A208A61E5410280005DDBF /* SnapshotHelper2-3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SnapshotHelper2-3.swift"; sourceTree = "<group>"; };
 		EB303E761DC92BE500A86D0F /* OrderForm.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = OrderForm.storyboard; sourceTree = "<group>"; };
 		EB615CC81DB58A90004F6547 /* STConfirmationPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STConfirmationPageViewController.swift; sourceTree = "<group>"; };
 		EEC9D16C6101E934CDFBAD25 /* Pods_Street_TreesTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Street_TreesTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -499,6 +501,7 @@
 			isa = PBXGroup;
 			children = (
 				D45F07651D0258320025F8F0 /* Street_TreesUITests.swift */,
+				D7A208A61E5410280005DDBF /* SnapshotHelper2-3.swift */,
 				D45F07671D0258320025F8F0 /* Info.plist */,
 			);
 			path = "Street TreesUITests";
@@ -1226,6 +1229,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7A208A71E5410280005DDBF /* SnapshotHelper2-3.swift in Sources */,
 				D45F07661D0258320025F8F0 /* Street_TreesUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

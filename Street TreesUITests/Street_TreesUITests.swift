@@ -36,10 +36,11 @@ class Street_TreesUITests: XCTestCase {
         
         // In UI tests it is usually best to stop immediately when a failure occurs.
         continueAfterFailure = false
-        // UI tests must launch the application that they test. Doing this in setup will make sure it happens for each test method.
-        XCUIApplication().launch()
+        
+        let app = XCUIApplication()
+        setupSnapshot(app)
+        app.launch()
 
-        // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
     }
     
     override func tearDown() {
@@ -47,28 +48,17 @@ class Street_TreesUITests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
+    func testSnapshot() {
         
+        snapshot("01")
         let app = XCUIApplication()
         app.navigationBars["Street Trees"].buttons["Add"].tap()
         
-        let nextButton = app.navigationBars["Choose Your Tree"].buttons["Next"]
-        nextButton.tap()
+        let element = app.childrenMatchingType(.Window).elementBoundByIndex(0).childrenMatchingType(.Other).element.childrenMatchingType(.Other).element
+        element.tap()
+        element.tap()
+        app.navigationBars["Choose Your Tree"].buttons["Next"].tap()
+        snapshot("02")
         
-        let selectATreeAlert = app.alerts["Select a Tree"]
-        selectATreeAlert.staticTexts["Please select a tree before progressing to the next step."].tap()
-        
-        let okButton = selectATreeAlert.collectionViews.buttons["OK"]
-        okButton.tap()
-        nextButton.tap()
-        okButton.tap()
-        app.collectionViews.staticTexts["Crape Myrtle"].tap()
-        nextButton.tap()
-        app.navigationBars["Tree Delivery Address"].buttons["Next"].tap()
-        app.alerts["Missing Street Address"].collectionViews.buttons["OK"].tap()
-        
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
-    
 }
